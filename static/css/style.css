@@ -1,7 +1,14 @@
-.hello{
-    background: violet;
+/* Path: static/css/style.css */
+
+h1 {
+  font-size: 2.5em;
+  border-bottom: 6px double #000;
 }
 
-h1{
-    color: #097;
+.sectionWrapper {
+  background: #efefef;
+}
+
+span {
+  font-weight: bold;
 }

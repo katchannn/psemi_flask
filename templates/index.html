@@ -1,26 +1,39 @@
-<!--index.html-->
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <title>psemi_1-4</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/static/css/style.css">
-    <title>Hello</title>
-</head>
+  <body>
+    <h1>1-4</h1>
 
-<body>
-    <h1>Hello from index.html</h1>
-    <p class="hello">Violet Color</p>
-    <p>Hello, World!
-    <p>
-        <a href="/jinja">Let's go to index_jinja.html</a>
+    <div class='sectionWrapper'>
+      <h2>2</h2>
+      <ul>
+        {% for i in context['nums'] %}
+        <li>{{ i }}</li>
+        {% endfor %}
+      </ul>
+    </div>
 
-    <h1>form送信</h1>
-    <form action="/form" method="GET">
-        <input name="data"></input>
-        <button type="submit">送信</button>
-    </form>
+    <div class='sectionWrapper'>
+      <h2>3</h2>
+      <ul>
+        {% for key, value in context['like'].items() %}
+        <li>{{ key }}は<span>{{ value }}</span>です。</li>
+        {% endfor %}
+      </ul>
+    </div>
 
-</body>
-
+    <div class='sectionWrapper'>
+      <h2>4</h2>
+      {% if context['flag'] %}
+      <p>flag is true</p>
+      {% else %}
+      <p>flag is false</p>
+      {% endif %}
+    </div>
+  </body>
 </html>
