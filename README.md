@@ -1,2 +1,2 @@
-# psemi_flask 課題1-8
+# psemi_flask 課題1～8
 
